@@ -1,15 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import routes from "../../routes";
+import "./card.scss";
 
 const Card = (props) => {
   return (
-    <li className="listContainer-list-item">
-      <img
-        className="itemImage"
-        alt="character"
-        src={props.character.img}
-      ></img>
-      <h1 className="itemTitle">{props.character.name}</h1>
-      <p className="itemSubtitle">{props.character.species}</p>
+    <li className="Detailscard">
+      {/* <Link to={`/detailscard/${props.character.id}`}> */}
+      <Link to={routes.details(props.character.id)}>
+        <img
+          className="Detailscard__img"
+          src={props.character.img}
+          alt={props.character.name}
+          title={`Picture of ${props.character.name}`}
+        />
+        <h1 className="Detailscard__title">{props.character.name}</h1>
+        <p className="Detailscard__subtitle1">{props.character.species}</p>
+      </Link>
     </li>
   );
 };
