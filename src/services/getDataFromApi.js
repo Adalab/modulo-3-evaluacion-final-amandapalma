@@ -1,8 +1,8 @@
-const getDataFromApi = () => {
+const getDatafromApi = () => {
   return fetch("https://rickandmortyapi.com/api/character/")
     .then((response) => response.json())
     .then((data) => {
-      return data.results.map((item) => {
+      const items = data.results.map((item) => {
         return {
           id: item.id,
           name: item.name,
@@ -13,16 +13,23 @@ const getDataFromApi = () => {
           episodes: item.episode.length,
         };
       });
+
+      //sort alphabetically
+      items.sort((a, b) => {
+        if (a.name > b.name) {
+          return 1;
+        }
+        if (a.name < b.name) {
+          return -1;
+        }
+        return 0;
+      });
+      //other option to sort alphabetically
+      // items.sort();
+      // items.reverse();
+
+      return items;
     });
 };
-export default getDataFromApi;
 
-// getDataFromApi() {
-//     // hacemos la llamada al servidor
-//     fetch('https://api.rand.fun/number/integer')
-//       .then(response => response.json())
-//       .then(responseData => {
-//         // y cuando responde el servidor guardamos los datos en el estado
-//         this.setState({ data: responseData });
-//       });
-//   }
+export default getDatafromApi;

@@ -4,6 +4,7 @@ import List from "./layout/List";
 import DetailsCard from "./layout/DetailsCard";
 import Footer from "./layout/Footer";
 import getDataFromApi from "../services/getDataFromApi";
+
 import { Route, Switch } from "react-router-dom";
 // import reset from "../stylesheets/reset.scss";
 import "./App.css";
@@ -39,21 +40,21 @@ function App() {
     return characters.name.toUpperCase().includes(nameFilter.toUpperCase());
   });
 
-  // sort by alphabetical order
-  // const sortAlphabetically =
-  // characters.sort((a, b) => {
-  //   if (a.name < b.name) {
-  //     return -1;
-  //   } else if (a.name > b.name) {
-  //     return 1;
-  //   } else {
-  //     return 0;
-  //   }
-  // });
+  // console.log("personajes filtrados", filteredByNameCharacters);
 
-  //other option
-  // characters.sort();
-  // characters.reverse();
+  // content to paint
+
+  // const contentToPaint = () => {
+  //   if (filteredByNameCharacters === []) {
+  //     return (
+  //       <div>
+  //         <p>character not founded</p>
+  //       </div>
+  //     );
+  //   } else {
+  //     return filteredByNameCharacters;
+  //   }
+  // };
 
   //Router
   const renderDetailsCard = (props) => {
@@ -62,8 +63,6 @@ function App() {
     const foundedCharacter = characters.find((character) => {
       return character.id === parseInt(clickedId);
     });
-
-    console.log("personaje encontrado", foundedCharacter);
     return <DetailsCard character={foundedCharacter} />;
   };
 
@@ -87,13 +86,18 @@ function App() {
           <Route
             exact
             path="/"
-            render={() => <List characters={filteredByNameCharacters} />}
+            render={() => (
+              <List
+                characters={filteredByNameCharacters}
+                nameFilter={nameFilter}
+              />
+            )}
           />
           <Route
             path="*"
             render={() => (
               <div>
-                <h1>route not found</h1>
+                <h1>Route not found</h1>
               </div>
             )}
           />
