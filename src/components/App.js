@@ -23,6 +23,11 @@ function App() {
     });
   }, []);
 
+  // //reset search
+  // const handleReset = (props) => {
+  //   setCharacters([]);
+  // };
+
   //events handlers
   const handleFilters = (filterData) => {
     setNameFilter(filterData.value);
