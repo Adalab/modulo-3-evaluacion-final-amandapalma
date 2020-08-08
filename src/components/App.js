@@ -23,7 +23,7 @@ function App() {
     });
   }, []);
 
-  // //reset search
+  //reset search
   // const handleReset = (props) => {
   //   setCharacters([]);
   // };
@@ -74,6 +74,7 @@ function App() {
   return (
     <div className="App">
       <Header handleFilters={handleFilters} />
+      {/* <ResetSearch handleReset={handleReset} /> */}
       <main>
         {/* <List characters={filteredByNameCharacters} /> */}
         <Switch>
