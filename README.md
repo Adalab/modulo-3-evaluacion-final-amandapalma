@@ -8,7 +8,7 @@ The project consists of developing a web application to filter and find the info
 
 The web application is developed with :crystal_ball: [React](https://reactjs.org/), and stylized with :sparkles: [CSS-Sass](https://sass-lang.com/). 
 
-I hope you enjoy it!
+**I hope you enjoy it!**
 
 .<br />
 ## :wrench: To run this project
