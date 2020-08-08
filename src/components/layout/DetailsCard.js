@@ -9,7 +9,7 @@ import {
   faPastafarianism,
   faQuestion,
 } from "@fortawesome/free-solid-svg-icons";
-import "./detailsCard.scss";
+import "./_detailsCard.scss";
 
 const DetailsCard = (props) => {
   const getIconStatus = (props) => {
@@ -49,7 +49,6 @@ const DetailsCard = (props) => {
         <div className="modal__dialog">
           <div className="modal__content">
             <header className="modal__header">
-              <h2 className="modal__title">{props.character.name}</h2>
               <Link to="/">
                 <span className="modal__icon">
                   <FontAwesomeIcon icon={faTimesCircle} />
@@ -57,6 +56,7 @@ const DetailsCard = (props) => {
               </Link>
             </header>
             <section>
+              <h2 className="modal__title">{props.character.name}</h2>
               <img
                 className="DetailsCard__img"
                 src={props.character.img}

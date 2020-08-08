@@ -1,0 +1,52 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+@import "../styles/reset";
+
+html {
+  font-family: "Open Sans Condensed", sans-serif;
+  // background-color: #d6e9ae;
+  margin: auto;
+  border: 3px solid red;
+  background-color: $color-secondary;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Just Another Hand", cursive;
+  text-transform: uppercase;
+}
+
+// font-family: 'Just Another Hand', cursive;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Open Sans Condensed', sans-serif;
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+//sería como el wrapper
+.appContainer {
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+
+  // @include desktop {
+  // }
+  // // @include tablet {
+
+  // // }
+}
+
+.main {
+  background-color: orange;
+  padding: 15px;
+}

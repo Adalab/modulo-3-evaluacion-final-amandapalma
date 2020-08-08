@@ -10,17 +10,19 @@ const FilterByName = (props) => {
     props.handleFilters({ value: ev.target.value, key: "name" });
   };
   return (
-    <form className="form" onSubmit={preventEvent}>
-      <label className="form-label" htmlFor="searcherbyname">
-        Type your character search!
-      </label>
-      <input
-        className="form-input"
-        id="searcherbyname"
-        type="text"
-        onChange={handleChange}
-      ></input>
-    </form>
+    <div className="formContainer">
+      <form className="form" onSubmit={preventEvent}>
+        <label className="form__label" htmlFor="searcherbyname">
+          <h3>Type your character search!</h3>
+        </label>
+        <input
+          className="form__input"
+          id="searcherbyname"
+          type="text"
+          onChange={handleChange}
+        ></input>
+      </form>
+    </div>
   );
 };
 

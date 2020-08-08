@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import SearchNotFound from "../actions/SearchNotFound";
-import "./list.scss";
+import "./_list.scss";
 
 const List = (props) => {
   const characterItems = props.characters.map((character) => {
@@ -9,7 +9,7 @@ const List = (props) => {
   });
   if (characterItems.length === 0)
     return <SearchNotFound nameFilter={props.nameFilter} />;
-  return <ul className="character-list">{characterItems}</ul>;
+  return <ul className="list">{characterItems}</ul>;
 };
 
 export default List;

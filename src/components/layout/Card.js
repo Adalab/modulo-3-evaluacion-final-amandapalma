@@ -1,21 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./card.scss";
+import "./_card.scss";
 
 const Card = (props) => {
   return (
-    <li className="Detailscard">
-      <Link to={`/details/${props.character.id}`}>
-        <img
-          className="Detailscard__img"
-          src={props.character.img}
-          alt={props.character.name}
-          title={`Picture of ${props.character.name}`}
-        />
-        <h1 className="Detailscard__title">{props.character.name}</h1>
-        <p className="Detailscard__subtitle1">{props.character.species}</p>
-      </Link>
-    </li>
+    <div clasnnName="cardContainer">
+      <li className="card">
+        <Link to={`/details/${props.character.id}`}>
+          <img
+            className="card__image"
+            src={props.character.img}
+            alt={props.character.name}
+            title={`Picture of ${props.character.name}`}
+          />
+          <div className="card__description">
+            <h1 className="card__description--title">{props.character.name}</h1>
+            <h2
+              className="
+            card__cardDescription--subtitle"
+            >
+              {props.character.species}
+            </h2>
+          </div>
+        </Link>
+      </li>
+    </div>
   );
 };
 

@@ -1,0 +1,7 @@
+.list {
+  background-color: white;
+  flex-grow: 4;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  align-content: stretch;
+}

@@ -1,11 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faCat, faCopyright } from "@fortawesome/free-solid-svg-icons";
-import "./footer.scss";
+import "./_footer.scss";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <div className="copy">
         <span>
           Powered with blood, sweat and &nbsp;

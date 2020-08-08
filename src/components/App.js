@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
-import "./App.css";
+import "./_app.scss";
 
 function App() {
   //states
@@ -43,9 +43,9 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Header handleFilters={handleFilters} />
-      <main>
+    <div className="appContainer">
+      <Header className="header" handleFilters={handleFilters} />
+      <main className="main">
         <Switch>
           <Route exact path="/details/:id" render={renderDetailsCard} />
           <Route
