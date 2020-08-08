@@ -4,7 +4,7 @@
 
 This is my **Rick & Morty character browser**, done as an evaluation exercise in [Adalab](https://adalab.es/).
 
-The project consists in developing a web application to filter and find the information related to the characters of Rick & Morty comic / serie. Other functionalities are also added. Take a look and discover them!
+The project consists of developing a web application to filter and find the information related to the characters of Rick & Morty comic / serie. Other functionalities are also added. Take a look and discover them!
 
 The web application is developed with :crystal_ball: [React](https://reactjs.org/), and stylized with :sparkles: [CSS-Sass](https://sass-lang.com/). 
 
