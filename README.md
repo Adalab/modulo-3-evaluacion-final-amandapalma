@@ -2,9 +2,7 @@
 
 ![Rick and Morty image](https://github.com/Adalab/modulo-3-evaluacion-final-amandapalma/blob/styles/src/images/Rick_and_Morty_logo_blue.svg)
 
-# :alien: RICK & MORTY CHARACTER BROWSER :sweat_drops:
-
-This is my Rick & Morty character browser, done as an evaluation exercise in [Adalab](https://adalab.es/).
+This is my **Rick & Morty character browser**, done as an evaluation exercise in [Adalab](https://adalab.es/).
 
 The project consists in developing a web application to filter and find the information related to the characters of Rick & Morty comic / serie. Other functionalities are also added. Take a look and discover them!
 
@@ -12,7 +10,7 @@ The web application is developed with :crystal_ball: [React](https://reactjs.org
 
 I hope you enjoy it!
 
-
+.<br />
 ## :wrench: To run this project
 
 1. Firs of all, you need to download and install Node.js. You can get it [here](https://nodejs.org/es/download/).<br />
@@ -33,7 +31,7 @@ I hope you enjoy it!
 
 #### `npm install node-sass`
 
-5. Install Font Awesome component. More info [here] (https://fontawesome.com/how-to-use/on-the-web/using-with/react).
+5. Install Font Awesome component. More info [here](https://fontawesome.com/how-to-use/on-the-web/using-with/react).
 
 #### `npm i --save @fortawesome/fontawesome-svg-core`
 #### `npm install --save @fortawesome/free-solid-svg-icons`
@@ -44,7 +42,7 @@ I hope you enjoy it!
 #### `npm start`
 
 
-
+.<br />
 ## :file_folder: Folder structure
 
 ```
@@ -95,25 +93,25 @@ I hope you enjoy it!
 \
 
 ```
-
+.<br />
 ## :handshake: Contributing :dancers:
 
 If you want to contribute, it could be great! feel free to open a pull request.<br />
 Contributions, issues and feature requests are welcome.<br />
-
+.<br />
 ##  :zap: Author
 
 This project has been powered with blood, sweat, and a lot of :purple_heart: by the person who writes this Readme.
 
 Hello! :raising_hand: :smiley:
-My name is Amanda Palma :palm_tree:. I'm a spanish junior front end pdeveloper looking forward to learn learn and learn and never end!
+My name is Amanda Palma :palm_tree:. I'm a spanish junior front end developer who loves learn learn and learn and never end!
 
 For whatever you want, free to contact me by:
 
 :bird: [Twitter](https://twitter.com/amandapalmaav)
 :briefcase: [Linkedin](https://www.linkedin.com/in/amanda~palma/)
 :computer: [GitHub](https://github.com/amandapalma)
-
+.<br />
 ## :memo: License
 
 Creative Commons License 2020 <br />
