@@ -24,10 +24,6 @@ const getDatafromApi = () => {
         }
         return 0;
       });
-      //other option to sort alphabetically
-      // items.sort();
-      // items.reverse();
-
       return items;
     });
 };

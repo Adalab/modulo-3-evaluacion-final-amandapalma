@@ -12,7 +12,7 @@ const FilterByName = (props) => {
   return (
     <form className="form" onSubmit={preventEvent}>
       <label className="form-label" htmlFor="searcherbyname">
-        Search your character
+        Type your character search!
       </label>
       <input
         className="form-input"

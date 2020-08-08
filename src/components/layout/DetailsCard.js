@@ -21,7 +21,6 @@ const DetailsCard = (props) => {
       return <FontAwesomeIcon icon={faQuestion} />;
     }
   };
-  // console.log(props);
   if (props.character === undefined) {
     return (
       <div className="modal">
@@ -66,7 +65,7 @@ const DetailsCard = (props) => {
               <ul className="DetailsCard__details">
                 <li>Name: {props.character.name}</li>
                 <li>
-                  Species:
+                  Species:&nbsp;&nbsp;
                   {props.character.species === "Alien" ? (
                     <FontAwesomeIcon icon={faPastafarianism} />
                   ) : (
@@ -75,7 +74,7 @@ const DetailsCard = (props) => {
                 </li>
                 <li>Planet: {props.character.planet}</li>
                 <li>Episodes: {props.character.episodes}</li>
-                <li>Status:{getIconStatus(props)}</li>
+                <li>Status:&nbsp;&nbsp;{getIconStatus(props)}</li>
               </ul>
             </section>
           </div>

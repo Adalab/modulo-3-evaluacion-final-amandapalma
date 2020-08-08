@@ -1,13 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import routes from "../../routes";
 import "./card.scss";
 
 const Card = (props) => {
   return (
     <li className="Detailscard">
-      {/* <Link to={`/detailscard/${props.character.id}`}> */}
-      <Link to={routes.details(props.character.id)}>
+      <Link to={`/details/${props.character.id}`}>
         <img
           className="Detailscard__img"
           src={props.character.img}
