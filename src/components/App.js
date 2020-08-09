@@ -65,5 +65,3 @@ function App() {
 }
 
 export default App;
-
-//se debe indicar las props qe se esperan del componente Router? Cómo se haría?

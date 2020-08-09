@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "./static/css/main.b34efebf.chunk.css",
+    "main.js": "./static/js/main.8520da32.chunk.js",
+    "main.js.map": "./static/js/main.8520da32.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.0049f3e3.js",
+    "runtime-main.js.map": "./static/js/runtime-main.0049f3e3.js.map",
+    "static/js/2.c822fa24.chunk.js": "./static/js/2.c822fa24.chunk.js",
+    "static/js/2.c822fa24.chunk.js.map": "./static/js/2.c822fa24.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.371ba4d852403541fdc90612cd7f036a.js": "./precache-manifest.371ba4d852403541fdc90612cd7f036a.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.b34efebf.chunk.css.map": "./static/css/main.b34efebf.chunk.css.map",
+    "static/js/2.c822fa24.chunk.js.LICENSE.txt": "./static/js/2.c822fa24.chunk.js.LICENSE.txt",
+    "static/media/_searchNotFound.scss": "./static/media/Background-Couch-1.3805adf6.png",
+    "static/media/Rick_and_Morty_-_logo.png": "./static/media/Rick_and_Morty_-_logo.75509f2e.png",
+    "static/media/_index.scss": "./static/media/black-space.3215e309.gif",
+    "static/media/_routeNotFound.scss": "./static/media/clouds.dedf103d.gif",
+    "static/media/fall-jerry.gif": "./static/media/fall-jerry.c4fc6fe9.gif",
+    "static/media/helmet-morty.gif": "./static/media/helmet-morty.48cd7813.gif",
+    "static/media/_app.scss": "./static/media/rickandmorty-background.8458b028.png",
+    "static/media/typing-summer.gif": "./static/media/typing-summer.ac9b7567.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0049f3e3.js",
+    "static/js/2.c822fa24.chunk.js",
+    "static/css/main.b34efebf.chunk.css",
+    "static/js/main.8520da32.chunk.js"
+  ]
+}
