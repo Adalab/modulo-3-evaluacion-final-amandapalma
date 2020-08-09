@@ -21,7 +21,7 @@ The web application is developed with :crystal_ball: [React](https://reactjs.org
 
 4. Install React
 
-### `npm install -g create-react-app`
+#### `npm install -g create-react-app`
 
 3. Install React Router component
 
@@ -36,6 +36,10 @@ The web application is developed with :crystal_ball: [React](https://reactjs.org
 #### `npm i --save @fortawesome/fontawesome-svg-core`
 #### `npm install --save @fortawesome/free-solid-svg-icons`
 #### `npm install --save @fortawesome/react-fontawesome`
+
+6. Istall PropTypes library
+
+ #### `npm install --save prop-types`
 
 6. Finally to run the app in local host, type: 
 
@@ -67,9 +71,11 @@ The web application is developed with :crystal_ball: [React](https://reactjs.org
 |   |- cardDetail.scss
 |   |- footer.scss
 | |-actions
-|   |- NotFound.js
+|   |- SearchNotFound.js
+|   |- RouteNotFound.js
 |   |- FilterByName.js
-|   |- notFound.scss
+|   |- searchnotFound.scss
+|   |- routenNotFound.scss
 |   |- filterByName.scss
 |
 |-images
