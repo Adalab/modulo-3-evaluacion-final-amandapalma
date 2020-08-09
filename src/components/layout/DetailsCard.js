@@ -9,6 +9,8 @@ import {
   faPastafarianism,
   faQuestion,
 } from "@fortawesome/free-solid-svg-icons";
+import mortyHelmet from "../../images/helmet-morty.gif";
+// import blackSpace from "../../images/black-space.gif";
 import "./_detailsCard.scss";
 
 const DetailsCard = (props) => {
@@ -23,22 +25,27 @@ const DetailsCard = (props) => {
   };
   if (props.character === undefined) {
     return (
-      <div className="modal">
-        <div className="modal__dialog">
-          <div className="modal__content">
-            <header className="modal__header">
-              <h1 className="modal__title">
+      <div className="modalNotExist">
+        <div className="modalNotExist__dialog">
+          <div className="modalNotExist__content">
+            <Link to="/">
+              <span className="modalNotExist__icon">
+                <FontAwesomeIcon icon={faTimesCircle} />
+              </span>
+            </Link>
+            <div className="modalNotExist__bubble triangle">
+              <h1 className="modalNotExist__bubble--title">
                 The character you're looking for doesn't exist!!
               </h1>
-              <Link to="/">
-                <span className="modal__icon ">
-                  <FontAwesomeIcon icon={faTimesCircle} />
-                </span>
-              </Link>
-            </header>
-            <section>
-              <img className="modal__notFoundImg" src="" alt="" title=""></img>
-            </section>
+            </div>
+            <div className="modalNotExist__imageContainer">
+              <img
+                className="modalNotExist__imageContainer--image"
+                src={mortyHelmet}
+                alt="Morty gif"
+                title="Morty gif"
+              ></img>
+            </div>
           </div>
         </div>
       </div>
