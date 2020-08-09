@@ -41,7 +41,7 @@ The web application is developed with :crystal_ball: [React](https://reactjs.org
 
  #### `npm install --save prop-types`
 
-6. Finally to run the app in local host, type: 
+7. Finally to run the app in local host, type: 
 
 #### `npm start`
 
