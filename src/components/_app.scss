@@ -3,7 +3,7 @@
 @import "../styles/reset";
 
 html {
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: $font-secondary;
   // background-color: #d6e9ae;
   margin: auto;
   border: 3px solid red;
@@ -11,9 +11,8 @@ html {
 }
 
 h1,
-h2,
-h3 {
-  font-family: "Just Another Hand", cursive;
+h2 {
+  font-family: $font-primary;
   text-transform: uppercase;
 }
 
@@ -30,6 +29,7 @@ h2 {
 }
 
 h3 {
+  font-family: $font-primary;
   font-size: 30px;
 }
 

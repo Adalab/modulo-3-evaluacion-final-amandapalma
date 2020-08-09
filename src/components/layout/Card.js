@@ -15,12 +15,12 @@ const Card = (props) => {
           />
           <div className="card__description">
             <h1 className="card__description--title">{props.character.name}</h1>
-            <h2
+            <h3
               className="
-            card__cardDescription--subtitle"
+            card__description--subtitle"
             >
               {props.character.species}
-            </h2>
+            </h3>
           </div>
         </Link>
       </li>

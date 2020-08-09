@@ -27,9 +27,9 @@ const DetailsCard = (props) => {
         <div className="modal__dialog">
           <div className="modal__content">
             <header className="modal__header">
-              <h2 className="modal__title">
+              <h1 className="modal__title">
                 The character you're looking for doesn't exist!!
-              </h2>
+              </h1>
               <Link to="/">
                 <span className="modal__icon ">
                   <FontAwesomeIcon icon={faTimesCircle} />
@@ -50,33 +50,56 @@ const DetailsCard = (props) => {
           <div className="modal__content">
             <header className="modal__header">
               <Link to="/">
-                <span className="modal__icon">
+                <span className="modal__header--icon">
                   <FontAwesomeIcon icon={faTimesCircle} />
                 </span>
               </Link>
             </header>
             <section>
-              <h2 className="modal__title">{props.character.name}</h2>
+              <h1 className="modal__title">{props.character.name}</h1>
               <img
-                className="DetailsCard__img"
+                className="modal__image"
                 src={props.character.img}
                 alt={props.character.name}
               />
-              <ul className="DetailsCard__details">
-                <li>Name: {props.character.name}</li>
-                <li>
-                  Species:&nbsp;&nbsp;
-                  {props.character.species === "Alien" ? (
-                    <FontAwesomeIcon icon={faPastafarianism} />
-                  ) : (
-                    <FontAwesomeIcon icon={faUser} />
-                  )}
+              <ul className="modal__details">
+                <li className="modal__details--detailsbox">
+                  <h3 className="modal__details--detailsbox-title">Species:</h3>
+                  &nbsp;&nbsp;
+                  <span className="modal__details--detailsbox-description">
+                    {props.character.species === "Alien" ? (
+                      <FontAwesomeIcon icon={faPastafarianism} />
+                    ) : (
+                      <FontAwesomeIcon icon={faUser} />
+                    )}
+                  </span>
                 </li>
-                <li>Planet: {props.character.planet}</li>
-                <li>Episodes: {props.character.episodes}</li>
-                <li>Status:&nbsp;&nbsp;{getIconStatus(props)}</li>
+                <li className="modal__details--detailsbox">
+                  <h3 className="modal__details--detailsbox-title">Planet: </h3>
+                  &nbsp;&nbsp;
+                  <p className="modal__details--detailsbox-description">
+                    {props.character.planet}
+                  </p>
+                </li>
+                <li className="modal__details--detailsbox">
+                  <h3 className="modal__details--detailsbox-title">
+                    Episodes:{" "}
+                  </h3>
+                  &nbsp;&nbsp;
+                  <p className="modal__details--detailsbox-description">
+                    {props.character.episodes}
+                  </p>
+                </li>
+                <li className="modal__details--detailsbox">
+                  <h3 className="modal__details--detailsbox-title">Status:</h3>
+                  &nbsp;&nbsp;
+                  <p className="modal__details--detailsbox-description">
+                    {getIconStatus(props)}
+                  </p>
+                </li>
               </ul>
             </section>
+            <footer className="modal__footer"></footer>
           </div>
         </div>
       </div>
