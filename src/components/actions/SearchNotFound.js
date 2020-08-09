@@ -30,10 +30,10 @@ function SearchNotFound(props) {
           <div className="modalNotFound__bubble triangle2">
             <h1 className="modalNotFound__bubble--title">
               There is no character that matches your search:{" "}
-              <h3 className="modalNotFound__bubble--matchTitle">
-                >{props.nameFilter}
-              </h3>
             </h1>
+            <h3 className="modalNotFound__bubble--matchTitle">
+              >{props.nameFilter}
+            </h3>
           </div>
           <div className="modalNotFound__imageContainer">
             <img

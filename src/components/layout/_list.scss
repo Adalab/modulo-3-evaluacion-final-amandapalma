@@ -1,7 +1,10 @@
 .list {
-  background-color: white;
   flex-grow: 4;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  align-content: stretch;
+  // grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  row-gap: 15px;
+  column-gap: 15px;
 }
