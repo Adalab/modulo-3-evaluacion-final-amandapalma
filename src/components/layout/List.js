@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Card from "./Card";
 import SearchNotFound from "../actions/SearchNotFound";
 import "./_list.scss";
@@ -13,3 +14,8 @@ const List = (props) => {
 };
 
 export default List;
+
+List.propTypes = {
+  characters: PropTypes.array,
+  nameFilter: PropTypes.string,
+};

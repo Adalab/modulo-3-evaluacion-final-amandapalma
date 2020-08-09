@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { Route, Switch } from "react-router-dom";
+import getDataFromApi from "../services/getDataFromApi";
 import Header from "./layout/Header";
 import List from "./layout/List";
 import DetailsCard from "./layout/DetailsCard";
 import Footer from "./layout/Footer";
 import RouteNotFound from "./actions/RouteNotFound";
-
-import getDataFromApi from "../services/getDataFromApi";
-import { Route, Switch } from "react-router-dom";
 import "./_app.scss";
 
 function App() {
-  //states
+  // states
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState("");
 
@@ -21,7 +20,7 @@ function App() {
     });
   }, []);
 
-  //events handlers
+  // event handlers
   const handleFilters = (filterData) => {
     setNameFilter(filterData.value);
   };
@@ -31,7 +30,7 @@ function App() {
     return characters.name.toUpperCase().includes(nameFilter.toUpperCase());
   });
 
-  //Router
+  // router
   const renderDetailsCard = (props) => {
     const clickedId = props.match.params.id;
 
@@ -66,3 +65,5 @@ function App() {
 }
 
 export default App;
+
+//se debe indicar las props qe se esperan del componente Router? Cómo se haría?

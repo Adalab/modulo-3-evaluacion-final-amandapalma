@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import logo from "../../images/Rick_and_Morty_-_logo.png";
 import FilterByName from "../actions/FilterByName";
 import { Link } from "react-router-dom";
@@ -25,3 +26,7 @@ const Header = (props) => {
 };
 
 export default Header;
+
+Header.propTypes = {
+  handleFilters: PropTypes.func,
+};

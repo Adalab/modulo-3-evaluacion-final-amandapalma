@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,7 +11,6 @@ import {
   faQuestion,
 } from "@fortawesome/free-solid-svg-icons";
 import mortyHelmet from "../../images/helmet-morty.gif";
-// import blackSpace from "../../images/black-space.gif";
 import "./_detailsCard.scss";
 
 const DetailsCard = (props) => {
@@ -115,3 +115,7 @@ const DetailsCard = (props) => {
 };
 
 export default DetailsCard;
+
+DetailsCard.propTypes = {
+  character: PropTypes.object,
+};
