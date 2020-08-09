@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./filterByName.scss";
+import "./_filterByName.scss";
 
 const FilterByName = (props) => {
   const preventEvent = (event) => {

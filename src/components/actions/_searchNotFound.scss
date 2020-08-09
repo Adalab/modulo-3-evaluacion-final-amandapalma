@@ -1,0 +1,86 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+// typed character not Found
+.modalNotFound {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-tertiary;
+
+  &__dialog {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    padding: 10px 50px 0px 50px;
+    border: solid 8px $color-light;
+    background-image: url("../../images/Background-Couch-1.png");
+    background-size: cover;
+    box-shadow: 5px 5px 5px $color-dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.modalNotFound__icon {
+  color: $color-dark;
+  font-size: 25px;
+
+  :hover {
+    color: $color-secondary;
+  }
+  :active {
+    color: $color-primary;
+  }
+}
+
+.modalNotFound__bubble {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 320px;
+  padding: 20px;
+  text-align: center;
+  color: $color-dark;
+  background-color: $color-light;
+  border: solid 3px $color-dark;
+  position: relative;
+  overflow: hidden;
+
+  &--matchTitle {
+    color: $color-primary;
+  }
+}
+
+.triangle2:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid $color-light;
+  border-right: 10px solid transparent;
+  border-top: 10px solid $color-light;
+  border-bottom: 10px solid transparent;
+  right: 90px;
+  bottom: -20px;
+}
+
+// .triangle:after {
+//   content: "";
+//   width: 0px;
+//   height: 0px;
+//   position: absolute;
+//   border-left: 10px solid $color-dark;
+//   border-right: 10px solid transparent;
+//   border-top: 10px solid $color-dark;
+//   border-bottom: 10px solid transparent;
+//   left: 24px;
+//   bottom: -13px;
+// }
