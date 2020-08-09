@@ -3,11 +3,12 @@ import Header from "./layout/Header";
 import List from "./layout/List";
 import DetailsCard from "./layout/DetailsCard";
 import Footer from "./layout/Footer";
+import RouteNotFound from "./actions/RouteNotFound";
+// import { Link } from "react-router-dom";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import getDataFromApi from "../services/getDataFromApi";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { Route, Switch } from "react-router-dom";
-import { Link } from "react-router-dom";
 import "./_app.scss";
 
 function App() {
@@ -61,12 +62,14 @@ function App() {
           <Route
             path="*"
             render={() => (
-              <div>
-                <Link to="/">
-                  <FontAwesomeIcon icon={faTimesCircle} />
-                </Link>
-                <h1>Route not found</h1>
-              </div>
+              <RouteNotFound />
+
+              // <div>
+              //   <Link to="/">
+              //     <FontAwesomeIcon icon={faTimesCircle} />
+              //   </Link>
+              //   <h1>Route not found</h1>
+              // </div>
             )}
           />
         </Switch>

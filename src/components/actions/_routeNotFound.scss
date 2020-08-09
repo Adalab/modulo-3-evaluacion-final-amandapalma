@@ -1,8 +1,7 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
 
-// typed character not Found
-.modalNotFound {
+.modalNotFoundRoute {
   position: fixed;
   top: 0;
   left: 0;
@@ -18,19 +17,19 @@
   }
 
   &__content {
-    padding: 10px 50px 0px 50px;
+    padding: 10px 50px 20px 50px;
     border: solid 8px $color-light;
-    background-image: url("../../images/Background-Couch-1.png");
-    background-size: cover;
+    background-image: url("../../images/clouds.gif");
     box-shadow: 5px 5px 5px $color-dark;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-size: cover;
   }
 }
 
-.modalNotFound__icon {
+.modalNotFoundRoute__icon {
   color: $color-dark;
   font-size: 25px;
 
@@ -42,7 +41,7 @@
   }
 }
 
-.modalNotFound__bubble {
+.modalNotFoundRoute__bubble {
   margin-top: 20px;
   margin-bottom: 10px;
   width: 320px;
@@ -50,13 +49,8 @@
   text-align: center;
   color: $color-dark;
   background-color: $color-light;
-  border: solid 3px $color-dark;
   position: relative;
-  overflow: hidden;
-
-  &--matchTitle {
-    color: $color-primary;
-  }
+  border: solid 3px $color-dark;
 }
 
 .triangle2:after {
@@ -64,10 +58,10 @@
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 10px solid $color-light;
-  border-right: 10px solid transparent;
-  border-top: 10px solid $color-light;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #fff;
+  border-top: 10px solid #fff;
   border-bottom: 10px solid transparent;
-  right: 90px;
-  bottom: -20px;
+  left: 40px;
+  bottom: -13px;
 }
