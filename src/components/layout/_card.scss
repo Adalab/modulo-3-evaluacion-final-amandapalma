@@ -1,5 +1,6 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
+@import "../../styles/typography";
 
 .cardContainer {
   display: flex;
@@ -7,53 +8,67 @@
   align-items: center;
   justify-content: center;
   background-color: $color-light;
-  padding: 5px;
   border: solid 2px $color-dark;
-  // box-shadow: 5px 5px 5px black;
+  padding: 15px;
+  // border: solid 3px red;
+  height: 308px;
+
+  @include desktop {
+    height: 223px;
+  }
 }
 
 .card {
-  position: relative;
-  overflow: hidden;
-  // border: 2px solid red;
-  margin: 10px;
-  height: 212px;
-  object-fit: fill;
-  object-position: center;
+  // border: solid 2px blue;
+
+  @include desktop {
+    position: relative;
+    overflow: hidden;
+  }
 
   &__image {
-    width: 100%;
-    height: auto;
+    margin-top: 6px;
+    height: 200px;
     transition: all 0.5s;
+    // border: solid 2px pink;
+    @include desktop {
+      width: 208px;
+      margin-top: 0;
+    }
   }
 
   &__description {
-    position: absolute;
     bottom: 0;
     width: 100%;
-    height: 80px;
     background-color: white;
-    border: 2px solid black;
-    transform: translateY(110%);
-    transition: all 0.5s ease-out;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 70px;
+
+    @include desktop {
+      height: 80px;
+      transform: translateY(110%);
+      transition: all 0.5s ease-out;
+      position: absolute;
+      border: 2px solid black;
+    }
 
     &--title {
       color: $color-dark;
-      font-size: 23px;
-      // no coge el font-size del h1 que se le asigna en app.scss
+      margin-top: 8px;
     }
 
     &--subtitle {
       color: $color-primary;
     }
   }
-
-  :hover .card__description {
-    transform: translateY(-0.5%);
-    transition: all 0.5s ease-out;
+  @include desktop {
+    :hover .card__description {
+      transform: translateY(-0.5%);
+      transition: all 0.5s ease-out;
+    }
   }
 }

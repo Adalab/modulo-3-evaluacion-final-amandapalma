@@ -19,6 +19,7 @@ const FilterByName = (props) => {
           className="form__input"
           id="searcherbyname"
           type="text"
+          placeholder="ex. Rick Sanchez"
           onChange={handleChange}
         ></input>
       </form>

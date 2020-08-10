@@ -1,5 +1,121 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
+@import "../../styles/typography";
+
+// character card details
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #eeec;
+
+  &__dialog {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+    @include tablet {
+      margin-top: 5px;
+    }
+  }
+
+  &__content {
+    padding: 15px 20px 15px 20px;
+    border: solid 3px $color-dark;
+    background-color: $color-light;
+    box-shadow: 5px 5px 5px black;
+  }
+
+  &__header {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: flex-end;
+
+    &--icon {
+      font-size: 20px;
+      color: $color-dark;
+
+      :hover {
+        color: $color-secondary;
+      }
+      :active {
+        color: $color-primary;
+      }
+
+      @include tablet {
+        font-size: 25px;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 5px;
+    font-size: 25px;
+    @include tablet {
+      font-size: 30px;
+    }
+  }
+
+  &__image {
+    height: 200px;
+
+    @include tablet {
+      height: 300px;
+    }
+  }
+
+  &__details {
+    width: 200px;
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 40% 60%;
+
+    @include tablet {
+      width: 300px;
+      grid-template-columns: 30% 70%;
+    }
+
+    &--detailsbox {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: flex-start;
+      padding: 3px;
+      margin-top: 3px;
+
+      @include tablet {
+        margin-top: 5px;
+        padding: 5px;
+      }
+
+      &-title {
+        font-size: 20px;
+        @include tablet {
+          font-size: 25px;
+        }
+      }
+
+      &-description {
+        font-size: 10px;
+
+        @include tablet {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+  }
+}
 
 // character doesn't exist
 .modalNotExist {
@@ -18,7 +134,8 @@
   }
 
   &__content {
-    padding: 10px 50px 20px 50px;
+    margin-top: 45px;
+    padding: 10px 30px 20px 30px;
     border: solid 8px $color-light;
     background-image: url("../../images/black-space.gif");
     box-shadow: 5px 5px 5px $color-dark;
@@ -26,124 +143,75 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-  }
-}
 
-.modalNotExist__icon {
-  color: $color-light;
-  font-size: 25px;
-
-  :hover {
-    color: $color-secondary;
-  }
-  :active {
-    color: $color-primary;
-  }
-}
-
-.modalNotExist__bubble {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  width: 320px;
-  padding: 20px;
-  text-align: center;
-  color: $color-dark;
-  background-color: $color-light;
-  position: relative;
-}
-
-.triangle:after {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 10px solid transparent;
-  border-right: 10px solid #fff;
-  border-top: 10px solid #fff;
-  border-bottom: 10px solid transparent;
-  left: 40px;
-  bottom: -13px;
-}
-
-// character card details
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #eeec;
-
-  &__dialog {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__content {
-    padding: 20px;
-    border: solid 3px $color-dark;
-    background-color: $color-light;
-    box-shadow: 5px 5px 5px black;
-  }
-
-  &__header {
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: flex-end;
-
-    &--icon {
-      font-size: 25px;
-      color: $color-dark;
-
-      :hover {
-        color: $color-secondary;
-      }
-      :active {
-        color: $color-primary;
-      }
-    }
-  }
-
-  &__title {
-    margin-bottom: 5px;
-  }
-
-  &__details {
-    width: 300px;
-    display: grid;
-    flex-direction: column;
-    grid-template-columns: 30% 70%;
-    // border: 1px solid red;
-    // padding: 10px;
-
-    &--detailsbox {
-      display: flex;
-      flex-direction: row;
-      align-items: baseline;
-      justify-content: flex-start;
-      padding: 10px;
+    @include tablet {
+      padding: 10px 50px 20px 50px;
       margin-top: 5px;
-      // border-left: 2px solid #ccc;
+    }
+  }
 
-      // border: 1px solid greenyellow;
-      &-title {
+  &__icon {
+    color: $color-light;
+    font-size: 20px;
+
+    @include tablet {
+      font-size: 25px;
+    }
+
+    :hover {
+      color: $color-secondary;
+    }
+    :active {
+      color: $color-primary;
+    }
+  }
+
+  &__bubble {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    color: $color-dark;
+    background-color: $color-light;
+    position: relative;
+
+    @include tablet {
+      width: 250px;
+    }
+
+    &--title {
+      font-size: 18px;
+
+      @include tablet {
         font-size: 23px;
-        // border: 1px solid green;
-      }
-      &-description {
-        font-size: 14px;
-        // border: 1px solid yellow;
       }
     }
   }
 
-  &__footer {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #ccc;
+  .triangle:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid #fff;
+    border-top: 10px solid #fff;
+    border-bottom: 10px solid transparent;
+    left: 40px;
+    bottom: -13px;
+  }
+
+  &__imageContainer {
+    height: 250px;
+
+    @include tablet {
+      height: 300px;
+    }
+
+    &--image {
+      height: 100%;
+    }
   }
 }
