@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./_filterByName.scss";
 
 const FilterByName = (props) => {

@@ -14,7 +14,7 @@ const getDatafromApi = () => {
         };
       });
 
-      //sort alphabetically
+      //Sort alphabetically
       items.sort((a, b) => {
         if (a.name > b.name) {
           return 1;

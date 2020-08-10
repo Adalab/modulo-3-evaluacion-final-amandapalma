@@ -9,28 +9,28 @@ import RouteNotFound from "./actions/RouteNotFound";
 import "./_app.scss";
 
 function App() {
-  // states
+  // States
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState("");
 
-  // prevent promise update
+  // Prevent promise update
   useEffect(() => {
     getDataFromApi().then((data) => {
       setCharacters(data);
     });
   }, []);
 
-  // event handlers
+  // Event handlers
   const handleFilters = (filterData) => {
     setNameFilter(filterData.value);
   };
 
-  // filters
+  // Filters
   const filteredByNameCharacters = characters.filter((characters) => {
     return characters.name.toUpperCase().includes(nameFilter.toUpperCase());
   });
 
-  // router
+  // Router
   const renderDetailsCard = (props) => {
     const clickedId = props.match.params.id;
 
