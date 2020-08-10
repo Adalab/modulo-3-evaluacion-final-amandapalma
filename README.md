@@ -6,22 +6,22 @@ This is my **Rick & Morty character browser**, done as an evaluation exercise in
 
 The project consists of developing a web application to filter and find the information related to the characters of Rick & Morty comic / serie. 
 
-###Home page###
+## Home page
 
 ![Home](https://github.com/Adalab/modulo-3-evaluacion-final-amandapalma/blob/master/src/images/screenshots/home.png)
 
 
-###Details Page###
+## Details Page
 
 When you click on a character you are redirected to a second page where you find a detail card of that character.
 
 ![Details Card](https://github.com/Adalab/modulo-3-evaluacion-final-amandapalma/blob/master/src/images/screenshots/detailsCard.png)
 
-###Error messages###
+## Error messages
 
 In addition, if you type an incorrect search, an incorrect route, or try to access to a character details directly through a route, with the wrong id, you will get the following screens:
 
-**Search not found***
+**Search not found**
 
 ![Search not found](https://github.com/Adalab/modulo-3-evaluacion-final-amandapalma/blob/master/src/images/screenshots/searchNotfound.png)
 
@@ -30,13 +30,13 @@ In addition, if you type an incorrect search, an incorrect route, or try to acce
 ![Route not found](https://github.com/Adalab/modulo-3-evaluacion-final-amandapalma/blob/master/src/images/screenshots/routeNotFound.png)
 
 **Character id route not found**
+
 ![Character Id not found](https://github.com/Adalab/modulo-3-evaluacion-final-amandapalma/blob/master/src/images/screenshots/characterIdNotFound.png)
 
-The project is still in progress but you can take a look!
 
 The web application is developed with :crystal_ball: [React](https://reactjs.org/), and stylized with :sparkles: [CSS-Sass](https://sass-lang.com/). 
 
-**I hope you enjoy it!**
+**The project is still in progress but you can take a look. I hope you enjoy it!!!**
 
 .<br />
 ## :wrench: To run this project
