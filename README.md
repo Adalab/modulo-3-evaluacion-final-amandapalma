@@ -112,9 +112,10 @@ The web application is developed with :crystal_ball: [React](https://reactjs.org
 | |- getDataFromApi.js
 |
 |-stylesheets
-|   |- variables.js
+|   |- variables.scss
 |   |- mixins.scss
 |   |- reset.scss
+|   |- typography.scss
 |
 |-index.js
 |-index.scss
