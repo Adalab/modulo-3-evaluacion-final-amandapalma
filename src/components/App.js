@@ -20,12 +20,14 @@ function App() {
     });
   }, []);
 
-  // Event handlers
+  // Event handlers (info (object) received by lifting from filterByName.js)
   const handleFilters = (filterData) => {
     setNameFilter(filterData.value);
   };
 
   // Filters
+  // Filter by nameFilter (input value from FilterByName.js)
+  // Pass to uppercase to not discriminate searching by lower or upper letters.
   const filteredByNameCharacters = characters.filter((characters) => {
     return characters.name.toUpperCase().includes(nameFilter.toUpperCase());
   });
@@ -42,6 +44,7 @@ function App() {
 
   return (
     <div className="appContainer">
+      {/* Send info to children to let them activate lifting */}
       <Header className="header" handleFilters={handleFilters} />
       <main className="main">
         <Switch>
@@ -50,6 +53,7 @@ function App() {
             exact
             path="/"
             render={() => (
+              //App.js pasa los datos ( en este caso ya filtrados)a su hija List.js
               <List
                 characters={filteredByNameCharacters}
                 nameFilter={nameFilter}

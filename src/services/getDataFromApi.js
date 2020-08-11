@@ -13,8 +13,7 @@ const getDatafromApi = () => {
           episodes: item.episode.length,
         };
       });
-
-      //Sort alphabetically
+      // Sort alphabetically
       items.sort((a, b) => {
         if (a.name > b.name) {
           return 1;
@@ -24,6 +23,7 @@ const getDatafromApi = () => {
         }
         return 0;
       });
+      //
       return items;
     });
 };
