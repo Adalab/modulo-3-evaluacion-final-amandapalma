@@ -12,6 +12,8 @@ function App() {
   // States
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState("");
+  //
+  const [speciesFilter, setSpeciesFilter] = useState("all");
 
   // Prevent promise update
   useEffect(() => {
@@ -20,17 +22,40 @@ function App() {
     });
   }, []);
 
-  // Event handlers (info (object) received by lifting from filterByName.js)
+  // Event handlers
   const handleFilters = (filterData) => {
-    setNameFilter(filterData.value);
+    if (filterData.key === "name") {
+      setNameFilter(filterData.value);
+    } else if (filterData.key === "species") {
+      setSpeciesFilter(filterData.value);
+    }
+
+    // console.log("name", nameFilter);
+    // console.log("species", speciesFilter);
+  };
+
+  //Reset
+
+  const handleReset = () => {
+    return setNameFilter("");
   };
 
   // Filters
-  // Filter by nameFilter (input value from FilterByName.js)
-  // Pass to uppercase to not discriminate searching by lower or upper letters.
-  const filteredByNameCharacters = characters.filter((characters) => {
-    return characters.name.toUpperCase().includes(nameFilter.toUpperCase());
-  });
+
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toUpperCase().includes(nameFilter.toUpperCase());
+    })
+    .filter((character) => {
+      // if (speciesFilter === "all") {
+      //   return true;
+      // } else {
+      //   return character.species === speciesFilter;
+      // }
+      return speciesFilter === "all"
+        ? true
+        : character.species === speciesFilter;
+    });
 
   // Router
   const renderDetailsCard = (props) => {
@@ -44,7 +69,6 @@ function App() {
 
   return (
     <div className="appContainer">
-      {/* Send info to children to let them activate lifting */}
       <Header className="header" handleFilters={handleFilters} />
       <main className="main">
         <Switch>
@@ -53,10 +77,10 @@ function App() {
             exact
             path="/"
             render={() => (
-              //App.js pasa los datos ( en este caso ya filtrados)a su hija List.js
               <List
-                characters={filteredByNameCharacters}
+                characters={filteredCharacters}
                 nameFilter={nameFilter}
+                handleReset={handleReset}
               />
             )}
           />

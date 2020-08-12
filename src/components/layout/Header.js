@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import FilterByName from "../actions/FilterByName";
+import FilterBySpecies from "../actions/filterBySpecies";
 import logo from "../../images/Rick_and_Morty_-_logo.png";
 import "./_header.scss";
 
@@ -21,6 +22,10 @@ const Header = (props) => {
         className="filterInput"
         handleFilters={props.handleFilters}
       ></FilterByName>
+      <FilterBySpecies
+        className="filterSelect"
+        handleFilters={props.handleFilters}
+      ></FilterBySpecies>
     </header>
   );
 };

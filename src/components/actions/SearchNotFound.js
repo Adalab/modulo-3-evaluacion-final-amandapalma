@@ -12,7 +12,10 @@ function SearchNotFound(props) {
         <div className="modalNotFound__content">
           <Link to="/">
             <span className="modalNotFound__icon">
-              <FontAwesomeIcon icon={faTimesCircle} />
+              <FontAwesomeIcon
+                icon={faTimesCircle}
+                onClick={props.handleReset}
+              />
             </span>
           </Link>
           <div className="modalNotFound__bubble triangle2">
